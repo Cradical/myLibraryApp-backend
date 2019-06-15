@@ -2,12 +2,6 @@
   "name": "my-library-frontend",
   "version": "0.1.0",
   "private": true,
-  "jest": {
-    "verbose": "true",
-    "setupFilesAfterEnv": [
-      "<rootDir>src/enzyme.config.js"
-    ]
-  },
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
