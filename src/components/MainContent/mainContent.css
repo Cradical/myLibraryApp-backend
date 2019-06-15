@@ -1,0 +1,14 @@
+.mainContent {
+  position: relative;
+  padding: 15px;
+  margin: 20px 15px;
+  border-radius: 2%;
+  box-shadow: 3px 1px 1px rgb(185, 184, 184), -1px 0 1px rgb(185, 184, 184);
+  text-align: center;
+  grid-area: main;
+}
+
+.main-content-header {
+  border-bottom: 1px solid gray;
+  font-size: 48px;
+}
