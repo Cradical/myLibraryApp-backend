@@ -3,7 +3,7 @@ import "./mainContent.css";
 
 import BookCard from "../BookCard";
 
-export default class MainContentBlock extends React.Component {
+export default class MainContent extends React.Component {
   render() {
     return (
       <div className="mainContent">
