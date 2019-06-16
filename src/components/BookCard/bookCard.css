@@ -1,4 +1,9 @@
 .book-card {
-    width: 33%;
-    height: auto;
+  width: 250px;
+  height: auto;
+}
+
+.card-img-top {
+  height: 150px;
+  width: 150px;
 }

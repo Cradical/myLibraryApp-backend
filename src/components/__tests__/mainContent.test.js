@@ -1,21 +1,22 @@
 import React from "react";
-import MainContent from "components/MainContent";
 import { shallow } from "enzyme";
+import MainContent from "components/MainContent";
+import BookCard from "components/BookCard";
 
-let wrapper;
-
-describe("the MainContent Component", () => {
+describe("<MainContent />", () => {
+  let wrapper;
   beforeEach(() => {
     wrapper = shallow(<MainContent />);
   });
 
   it("displays a title", () => {
-    expect(wrapper.find(".main-content-header")).toBe("On The Shelve");
+    expect(wrapper.find(".main-content-header").length).toEqual(1);
+    expect(wrapper.find(".main-content-header").html()).toContain(
+      "On The Shelve"
+    );
   });
 
-  context("in rendering the BookCards", () => {
-    it("renders three BookCards", () => {
-      expect(wrapper.find("BookCard")).toHaveLength(3);
-    });
+  it("displays at least one BookCard", () => {
+    expect(wrapper.find(BookCard).length).toEqual(1);
   });
 });
