@@ -12,19 +12,16 @@ import {
 import "./bookCard.css";
 
 const BookCard = props => {
-  const { src, alt } = props.cardImgProps;
+  const { bookImg, bookTitle, bookSubtitle, bookSummary } = props.cardInfo;
 
   return (
     <Fragment>
       <Card className="book-card">
-        <CardImg top width="100%" src={src} alt={alt} />
+        <CardImg top width="100%" src={bookImg.src} alt={bookImg.alt} />
         <CardBody>
-          <CardTitle>Book title</CardTitle>
-          <CardSubtitle>Book subtitle</CardSubtitle>
-          <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </CardText>
+          <CardTitle>{bookTitle}</CardTitle>
+          <CardSubtitle>{bookSubtitle}</CardSubtitle>
+          <CardText>{bookSummary}</CardText>
           <Button>Button</Button>
         </CardBody>
       </Card>
