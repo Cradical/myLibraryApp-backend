@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Card,
   CardImg,
@@ -12,15 +12,12 @@ import {
 import "./bookCard.css";
 
 const BookCard = props => {
+  const { src, alt } = props.cardImgProps;
+
   return (
-    <div className="book-card">
-      <Card>
-        <CardImg
-          top
-          width="100%"
-          src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-          alt="Card image cap"
-        />
+    <Fragment>
+      <Card className="book-card">
+        <CardImg top width="100%" src={src} alt={alt} />
         <CardBody>
           <CardTitle>Book title</CardTitle>
           <CardSubtitle>Book subtitle</CardSubtitle>
@@ -31,7 +28,7 @@ const BookCard = props => {
           <Button>Button</Button>
         </CardBody>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 
