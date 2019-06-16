@@ -3,8 +3,12 @@ import "./mainContent.css";
 
 import BookCard from "../BookCard";
 
+//Declaration of variables used in component state
+let books;
+
 export default class MainContent extends React.Component {
   state = {
+    books,
     cardInfo: {
       bookImg: {
         src: "https://via.placeholder.com/100",
@@ -15,6 +19,13 @@ export default class MainContent extends React.Component {
       bookSummary: "This is a quick summary of the book"
     }
   };
+
+  async componentDidMount() {
+    let response = await fetch("https://shelf-book.herokuapp.com/");
+    let data = await response.json();
+
+    this.setState({ books: data.books });
+  }
 
   render() {
     return (
