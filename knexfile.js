@@ -1,22 +1,20 @@
 // Update with your config settings.
 
 module.exports = {
-
   development: {
-    client: 'pg',
-    connection: 'postgres://localhost/my-library-db'
+    client: "pg",
+    connection: "postgres://localhost/my_library"
   },
 
   production: {
-    client: 'postgresql',
+    client: "postgresql",
     connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: "knex_migrations"
     }
   }
-
 };
