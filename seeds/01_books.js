@@ -9,6 +9,7 @@ exports.seed = function(knex, Promise) {
           author: "Jordan Peterson",
           bookSummary:
             "In-depth look at human consciousness through the lense of the Yin/Yang dichotomy",
+          nonFiction: true,
           genre: "Psychology/Self Improvement",
           haveRead: false,
           imageLink:

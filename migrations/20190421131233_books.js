@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
     book.increments("id");
     book.string("author");
     book.text("bookSummary");
+    book.boolean("nonFiction");
     book.string("genre");
     book.boolean("haveRead");
     book.string("imageLink");
