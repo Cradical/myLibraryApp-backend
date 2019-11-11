@@ -16,17 +16,23 @@ module.exports = {
 
   //CREATE
   addBook(newBook) {
-    return database('books').insert(newBook).returning('*')
+    return database('books')
+      .insert(newBook)
+      .returning('*')
   },
 
   //UPDATE
-  updateBookTitleById(bookInfo, id) {
-    return database('books').update(bookInfo).where('id', id).returning('*')
+  updateBookInfoById(bookInfo, id) {
+    return database('books')
+      .update(bookInfo)
+      .where('id', id)
+      .returning('*')
   },
 
   //DELETE
   deleteBookById(id) {
-    return database('books').where('id', id).del()
+    return database('books')
+      .where('id', id)
+      .del()
   },
-
 }
